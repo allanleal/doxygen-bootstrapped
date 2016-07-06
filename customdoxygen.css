@@ -13,12 +13,6 @@ font-size: 1.15em !important;
 .navbar{
  border: 0px solid #222 !important;
 }
-table{
-    white-space:pre-wrap !important;
-}
-/*
- ===========================
- */
 
 
 /* Sticky footer styles
@@ -122,6 +116,14 @@ a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
     color: #4665A2;
 }
 
+table a, .table a {
+  text-decoration: none !important;
+}
+
+a.el:hover {
+  text-decoration: underline !important;
+}
+
 /* @end */
 
 dl.el {
@@ -148,8 +150,8 @@ div.fragment {
 }
 
 div.line {
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 12px;
+    font-family: monospace, fixed;
+    font-size: 13px;
     min-height: 13px;
     line-height: 1.0;
     text-wrap: unrestricted;
@@ -157,7 +159,7 @@ div.line {
     white-space: -pre-wrap;     /* Opera 4-6 */
     white-space: -o-pre-wrap;   /* Opera 7 */
     white-space: pre-wrap;      /* CSS3  */
-    word-wrap: normal;      /* IE 5.5+ */
+    word-wrap: break-word;      /* IE 5.5+ */
     text-indent: -53px;
     padding-left: 53px;
     padding-bottom: 0px;
@@ -173,9 +175,6 @@ div.line {
     transition-property: background-color, box-shadow;
     transition-duration: 0.5s;
 }
-div.line:hover{
-    background-color: #FBFF00;
-}
 
 div.line.glow {
     background-color: cyan;
@@ -186,21 +185,16 @@ div.line.glow {
 span.lineno {
     padding-right: 4px;
     text-align: right;
-    color:rgba(0,0,0,0.3);
-    border-right: 1px solid #EEE;
-    border-left: 1px solid #EEE;
-    background-color: #FFF;
+    border-right: 2px solid #0F0;
+    background-color: #E8E8E8;
     white-space: pre;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace ;
 }
 span.lineno a {
-    background-color: #FAFAFA;
-    cursor:pointer;
+    background-color: #D8D8D8;
 }
 
 span.lineno a:hover {
-    background-color: #EFE200;
-    color: #1e1e1e;
+    background-color: #C8C8C8;
 }
 
 div.groupHeader {
@@ -332,10 +326,7 @@ span.SRScope {
 
 .table > tbody > tr > td.memSeparator {
   line-height: 0;
-  .table-hover;
-
 }
-
 .memItemLeft, .memTemplItemLeft {
   white-space: normal;
 }
